@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Dashboard</title>
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body class="light">
+    <header>
+      <div class="container">
+        <h1 class="head">
+          Social Media Dashboard
+          <p>Total Followers: 23,004</p>
+        </h1>
+
+        <div class="theme-toggler">
+          <input
+            type="checkbox"
+            name="themeToggler"
+            class="theme-switcher"
+            id="themeSwitcher"
+          />
+          <label for="themeSwitcher">Dark Mode</label>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <section>
+        <ul class="overall grid-container">
+          <!-- facebook -->
+          <li class="grid-item facebook">
+            <div class="user-info">
+              <ion-icon name="logo-facebook"></ion-icon>
+              <p class="username">@nathanf</p>
+            </div>
+            <div class="follower-info">
+              <h3>1987</h3>
+              <p>Follower</p>
+            </div>
+            <div class="status up">12 Today</div>
+          </li>
+
+          <!-- twitter -->
+          <li class="grid-item twitter">
+            <div class="user-info">
+              <ion-icon name="logo-twitter"></ion-icon>
+              <p class="username">@nathanf</p>
+            </div>
+            <div class="follower-info">
+              <h3>1044</h3>
+              <p>Follower</p>
+            </div>
+            <div class="status up">99 Today</div>
+          </li>
+
+          <!-- instagram -->
+          <li class="grid-item instagram">
+            <div class="user-info">
+              <ion-icon name="logo-instagram"></ion-icon>
+              <p class="username">@realnathanf</p>
+            </div>
+            <div class="follower-info">
+              <h3>11K</h3>
+              <p>Follower</p>
+            </div>
+            <div class="status up">1099 Today</div>
+          </li>
+
+          <!-- youtube -->
+          <li class="grid-item youtube">
+            <div class="user-info">
+              <ion-icon name="logo-youtube"></ion-icon>
+              <p class="username">Nathan F.</p>
+            </div>
+            <div class="follower-info">
+              <h3>8239</h3>
+              <p>Subscribers</p>
+            </div>
+            <div class="status down">144 Today</div>
+          </li>
+        </ul>
+
+        <main class="overview">
+          <h2 class="head">Overview - Today</h2>
+
+          <ul class="grid-container">
+            <!-- facebook -->
+            <li class="grid-item facebook">
+              <div class="item-head">
+                <p>Page Views</p>
+                <ion-icon name="logo-facebook"></ion-icon>
+              </div>
+
+              <div class="data">
+                <p class="count">87</p>
+                <p class="status up">
+                  <span>3%</span>
+                </p>
+              </div>
+            </li>
+
+            <li class="grid-item facebook">
+              <div class="item-head">
+                <p>Likes</p>
+                <ion-icon name="logo-facebook"></ion-icon>
+              </div>
+
+              <div class="data">
+                <p class="count">52</p>
+                <p class="status down">
+                  <span>2%</span>
+                </p>
+              </div>
+            </li>
+
+            <!-- instagram -->
+            <li class="grid-item instagram">
+              <div class="item-head">
+                <p>Likes</p>
+                <ion-icon name="logo-instagram"></ion-icon>
+              </div>
+
+              <div class="data">
+                <p class="count">5462</p>
+                <p class="status up">
+                  <span>2257%</span>
+                </p>
+              </div>
+            </li>
+
+            <li class="grid-item instagram">
+              <div class="item-head">
+                <p>Profile Views</p>
+                <ion-icon name="logo-instagram"></ion-icon>
+              </div>
+
+              <div class="data">
+                <p class="count">52k</p>
+                <p class="status up">
+                  <span>1375%</span>
+                </p>
+              </div>
+            </li>
+
+            <!-- twitter -->
+            <li class="grid-item twitter">
+              <div class="item-head">
+                <p>Retweets</p>
+                <ion-icon name="logo-twitter"></ion-icon>
+              </div>
+
+              <div class="data">
+                <p class="count">117</p>
+                <p class="status up">
+                  <span>303%</span>
+                </p>
+              </div>
+            </li>
+
+            <li class="grid-item twitter">
+              <div class="item-head">
+                <p>Likes</p>
+                <ion-icon name="logo-twitter"></ion-icon>
+              </div>
+
+              <div class="data">
+                <p class="count">507</p>
+                <p class="status up">
+                  <span>553%</span>
+                </p>
+              </div>
+            </li>
+
+            <!-- youtube -->
+            <li class="grid-item youtube">
+              <div class="item-head">
+                <p>Likes</p>
+                <ion-icon name="logo-youtube"></ion-icon>
+              </div>
+
+              <div class="data">
+                <p class="count">107</p>
+                <p class="status down">
+                  <span>19%</span>
+                </p>
+              </div>
+            </li>
+
+            <li class="grid-item youtube">
+              <div class="item-head">
+                <p>Total Views</p>
+                <ion-icon name="logo-youtube"></ion-icon>
+              </div>
+
+              <div class="data">
+                <p class="count">1407</p>
+                <p class="status down">
+                  <span>12%</span>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </main>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script>
+      let themeToggler = document.querySelector("#themeSwitcher");
+      let body = document.querySelector("body");
+
+      themeToggler.addEventListener("change", function () {
+        if (themeToggler.checked) {
+          body.classList.add("dark");
+          body.classList.remove("light");
+        } else {
+          body.classList.remove("dark");
+          body.classList.add("light");
+        }
+      });
+    </script>
+  </body>
+</html>
