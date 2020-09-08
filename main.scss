@@ -123,7 +123,8 @@ header {
   .head {
     margin: 0.3rem 0;
 
-    p {
+    small {
+      display: block;
       font-size: 0.9rem;
       margin: 0.2rem 0;
       color: $l_grayText;

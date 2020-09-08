@@ -100,7 +100,8 @@ header .head {
   margin: 0.3rem 0;
 }
 
-header .head p {
+header .head small {
+  display: block;
   font-size: 0.9rem;
   margin: 0.2rem 0;
   color: #63687e;
